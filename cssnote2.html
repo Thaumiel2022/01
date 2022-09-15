@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子笔记</title>
+    <style>
+        /* 过度动画 */
+        
+        .box4 {
+            width: 20px;
+            /* 在夫级加入transition 过渡动画:需要过度的属性(如果需要全部变化写ALL就可以)花费时间 运动曲线 何时开始 */
+            /* 运动曲线的值:linear 匀速 ease 逐渐慢下来 ease-in 加速 ease-out 减速 ease-in-out 加速后减速 */
+            transition: width 0.5s ease 1s;
+        }
+        /* 宽度调整函数calc 也可以使用+-*/
+        
+        width:calc(100-30px)
+        /* 图片模糊 */
+        
+        filter:blur(5px);
+        /* 边框不再撑大盒子。在第一行加入此代码 */
+        
+        box-sizing:border-box;
+        /* 伪类选择器 */
+        /* 在父级后面添加一个盒子，设置大小前需要转换 */
+        
+        div::after {
+            content: '';
+        }
+        /* 在父级前面添加一个盒子，设置大小前需要转换 */
+        
+        div::before {
+            /* 必须要加content */
+            content: '';
+        }
+        /* 新增的选择器 */
+        /* 选择第几行 even偶数（或者2n） odd奇数（或者2n+1）5n五的倍数5 10 15 等 n+5 从第五个到之后 -n+5 从1到5  */
+        /* 使用方法同上，一般使用nth-of-type */
+        
+        div:nth-of-type(1) {}
+        
+        div:nth-child(1) {}
+        
+        div[class*="类名关键字"] {}
+        /* 新增的input 属性 */
+        
+        required="required" 此项必填 placeholder="默认信息" autofocus="autofocus" 自动将光标定位到此处 autocomplete off/on 关闭/打开搜索记录 需要加name属性 multiple="multiple" 在file文件提交中可以选择多个文件
+        /* 新增的input表单 */
+        
+        type="email" 邮箱 type="url" type="date" 日期 type="time" 时间 type="month" 月 type="week" 周 type="number" 数字 type="tel" 手机号码 type="sreach" 搜索 type="color" 颜色
+        /* 音频 */
+        /* autoplay 自动播放 controls 显示播放器ui loop 循环播放 */
+        
+        <audio src="地址" autoplay="autoplay" controls="controls" loop="loop">
+        /* 视频 */
+        /* autoplay 自动播放 muted 静音播放 controls 显示播放器ui loop 自动播放 poster 默认显示的视频封面 */
+        
+        <video src="地址" autoplay="autoplay" muted="muted" controls="controls" width="10px" hight=10px loop="loop" poster="地址">
+        /* 多行文字溢出显 示省略号 */
+        
+        .box {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子显示  webkit 一种浏览器内核 */
+            display: -webkit-box;
+            /* 调整出现省略号的行数 */
+            -webkit-line-clamp: 2;
+            /* 排列方式垂直*/
+            -webkit-box-orient: vertical;
+        }
+        /* 单行文字溢出显示省略号 */
+        
+        .box {
+            /* 强制在一行内显示 */
+            white-space: nowrap;
+            /* 超出的部分隐藏 */
+            overflow: hidden;
+            /* 超出部分显示省略号 ellipasis省略号 */
+            text-overflow: ellipsis;
+        }
+        
+        .tx {
+            /* 垂直对齐.top 上对齐 middle 居中 bottom 下边线对齐 */
+            vertical-align: middle;
+        }
+        /* 取消文本域的拖拽 */
+        
+        .tx {
+            resize: none;
+        }
+        /* 取消input表单的边框 */
+        
+        .in {
+            outline: none;
+        }
+        /* 鼠标样式 */
+        
+        .box {
+            /* 小手图标 */
+            cursor: pointer;
+        }
+        
+        .box {
+            /* 移动图标 */
+            cursor: move;
+        }
+        
+        .box {
+            /* 文本图标 */
+            cursor: text;
+        }
+        
+        .box {
+            /* 禁止图标 */
+            cursor: not-allowed;
+        }
+        
+        .box {
+            background-image: url(0001.png);
+            /* 精灵图,可以显示大图中的一小部分.先X后Y 一般值为负 */
+            background-position: -180px -5px;
+        }
+        /* 可以理解为在鼠标经过.box后,.box2所需要做的该变 */
+        
+        .box:hover .box2 {}
+        
+        .box {
+            /* 移除内容显示 auto自动添加需要的滚动条 */
+            overflow: auto;
+        }
+        
+        .box {
+            /* 移除内容显示 scroll滚动条 */
+            overflow: scroll;
+        }
+        
+        .box {
+            /* 移除内容显示 hidden不显示超出的内容 */
+            overflow: hidden;
+        }
+        
+        .box {
+            /* 移除内容显示 visible默认值 */
+            overflow: visible;
+        }
+        
+        .box1 {
+            /* 显示元素 */
+            visibility: visible;
+        }
+        
+        .box1 {
+            /* 隐藏元素,但占用位置 */
+            visibility: hidden;
+        }
+        
+        .box1 {
+            /* block也有显示隐藏元素的作用 */
+            display: block
+        }
+        
+        .box1 {
+            /* 隐藏元素,隐藏后不占用位置 */
+            display: none;
+        }
+        /* 定位  边偏移:top: px; left: px; bottom: px; right: px;*/
+        
+        .box4 {
+            /* 粘性定位sticky 在小于窗口边偏移值的时候变成固定定位 兼容性不好一般不适用 */
+            position: sticky;
+            top: 20px;
+            /* 定位叠放顺序，类似于图层。如不设置最下方的盒子会在最上面 */
+            z-index: 1;
+        }
+        
+        .box3 {
+            /* 固定定位fixed 可以让盒子固定在视窗上(网页),脱离标准流,不占用原来的位置 常用于网页小广告或者悬浮窗口*/
+            position: fixed;
+            left: 0;
+        }
+        
+        .box2 {
+            /* 绝对定位absolute 跟随浏览器的定位方式.不被父级限制 如需基于父级,给父级加定位即可 (绝对定位移动后不占原来空间) */
+            position: absolute;
+            left: 100px;
+        }
+        
+        .box1 {
+            /* 相对定位relative 需要加边偏移 根据当前位置进行移动.移动后继续占有原来的空间 */
+            position: relative;
+            top: 100px;
+        }
+        
+        .box {
+            /* 静态定位:默认的定位模式,一般不用 */
+            position: static;
+        }
+        /* 更加完善的清除浮动方法,同下边一样也可以直接复制 */
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:before {
+            clear: both;
+        }
+        
+        .clearfix {
+            zoom: 1;
+        }
+        /* 清楚浮动最好方法,可直接复制 zoom为适配低版本浏览器 */
+        
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        
+        .clearfix {
+            zoom: 1;
+        }
+        /* -------------------------------- */
+        
+        .div {
+            /* 用于在父级添加清除浮动 */
+            overflow: hidden;
+            /* 清楚浮动.用于父级盒子没有高度时可将该代码至于最后一个盒子后的新建盒子内 */
+            clear: both;
+        }
+        
+        div {
+            /* 浮动float 用于布局 只有left right两个值 */
+            float: right;
+        }
+        
+        h1 {
+            /* 文字阴影,同盒子阴影但是没有spreod模糊尺寸和inset内阴影 */
+            text-shadow: 10px 10px 10px rgb(176, 37, 37);
+        }
+        
+        div {
+            /* 盒子阴影.数值依次为h-shadow水平 v-shadow垂直 blur 模糊距离 spreod 尺寸 color 颜色 在后面加inset可以改为内阴影. */
+            box-shadow: 5px 2px 10px 10px rgb(132, 132, 132);
+        }
+        
+        div {
+            /* 圆角边框 符合写法顺序为顺时针 左上 右上 右下 左下*/
+            border-radius: 10px 20px 10px 20px;
+        }
+        
+        div {
+            /* 宽 */
+            width: 50px;
+            /* 高 */
+            height: 60px;
+            /* 边框宽 */
+            border: 5px;
+            /* 边框的样式 solid 实线边框 dashed 虚线边框 dotted 点线边框 */
+            border-style: solid;
+            border-color: aquamarine;
+            /* collapse合并相邻的边框 */
+            border-collapse: collapse;
+        }
+        
+        div {
+            /* padding:内边距 left 左 right 右 top 上 bottom下 */
+            padding-left: 20px;
+            /* 复合写法: 单一个值为上下左右 两个值为上下 三个值为上左右下 四个值的顺序为上右下左顺时针 */
+        }
+        
+        div {
+            /* margin 外边距 具体用法同padding内边距 auto 自动 可用于居中对齐,前提是必须有width宽度 左右外边距必须为auto */
+            margin: 20px auto;
+        }
+        /* 防止嵌套塌陷可以给父级元素加边框 transparent(透明) 或加内边距 或者使用 overflow:hidden;(防止塌陷) -常用*/
+        
+        * {
+            /* 清楚内外边距 css第一行代码 */
+            padding: 0;
+            margin: 0;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="1" cols="30" rows="10" class="tx"></textarea>
+    <input type="text" class="in">
+    <h1>文字的阴影</h1>
+    <div>01</div>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <h6>01</h6>
+    <div>01</div>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4">dddddd</div>
+</body>
+
+
+</html>

@@ -1,0 +1,152 @@
+<!-- 声明文档类型为HTML -->
+<!DOCTYPE html>
+<!-- lang 定义语言类型 en=English英文网页 zh-CN中文网页 fr 法语 用于浏览器内置翻译器的识别 -->
+<html lang="zh-CN">
+<!-- 头部 -->
+<!-- 添加注释为ctrl+/ -->
+
+<head>
+    <!-- charset字符集,UTF-8也被称为万国码,包含所有国家所需要用到的字符 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, linitia-scale=1.0">
+    <!-- 网页名 -->
+    <title>Vscode练习</title>
+    <!-- 特殊字符 -->
+    &nbsp; 空格 &lt; 小于号 &gt; 大于号
+
+
+</head>
+
+<!-- 内容 -->
+
+<body>
+    <!-- 标题，由大到小共六级（h1~h6） -->
+    <h1 id="ffff">此为内容的标题</h1>
+    <!-- 水平线标签 -->
+    <hr>
+    <!-- 换行符<p></p> -->
+    <p>如果你想要做的是将一个 HTM / HTML 文件转换为方便离线查看的文件，这时图片或 PDF 格式会方便很多。</p>
+    <!-- <br\>强制换行 此为一个单标签 -->
+    <p>在 Chrome 中，鼠标右键单击网页，<br /> 出现的选项菜单中进入 “打印(P)...”(快捷键：CTRL + P) ，在打印选项中选择另存为 PDF，以将窗口中的页面转换为 PDF 文件。Chrome 浏览器的扩展功能也称为“全屏截屏”，可将 Chrome 浏览器中所有打开的 HTM / HTML 文件转换为 PNG 文件。</p>
+    <!-- 加粗效果 -->
+    <br />此为<strong>加粗</strong>效果 <br /> 此为<b>加粗</b>效果
+    <!-- 倾斜效果 -->
+    <br />此为<em>倾斜</em>效果 <br /> 此为<i>倾斜</i>效果
+    <!-- 删除线效果 -->
+    <br />此为<del>删除线</del>效果 <br \> 此为<s>删除线</s>效果
+    <!-- 下划线效果 -->
+    <br />此为<ins>下划线</ins>效果 <br /> 此为<u>下划线</u>效果
+    <!-- <div>素材盒子,无语义div独占一行</div> -->
+    <div>此为盒子</div>
+    <!-- <span></span>同<div></div>区别在于一行可有多个 -->
+    <span>素材1</span><span>素材2</span><span>素材3</span>
+    <!-- 图像标签 src="图片位置" alt="图像未显示时的文本"title="鼠标悬停显示的文本" width="
+        需要设置的宽度" height="需要设置的高度" 宽度与高度只需要设置一个即可,图片会自行等比例缩放border="边框宽度"-->
+    <img src="0001.png" alt="图像未显示时的文本" title="鼠标悬停显示的文本" width="200" height="400" border="2px">
+    <!-- 相对路径 图像文件与打开的html文件处于同一级时抗议不必理会,位于下一级时为/;上一级为../一切以打开的html文件为基准 -->
+    <!-- 绝对路径直接复制资源管理器链接即可,很少使用 <img src="D:\图标\HTML\0001.png" \>-->
+    <!-- 或使用网站内的图片链接也可<img src="http://cms-bucket.ws.126.net/2022/0816/d1e35b3fj00rgoopr000oc000cl0069c.jpg?imageView&thumbnail=453y225&quality=85&type=webp"> -->
+    <!-- 超链接的外部链接,href为链接的地址,target时打开方式;其中_self为直接打开也是默认项,_blank通过新建页面打开 -->
+    <a href="http://www.cctv.com" target="_blank">外部链接</a>
+    <!-- 内部链接,注意路径即可 -->
+    <a href="a.html">内部链接</a>
+    <!-- 空链接 ：#-->
+    <a href="#">空链接</a>
+    <!-- 下载链接,同上 -->
+    <a href="demo.zip">下载链接</a>
+    <!-- 图片，文本，表格，音频，视频。都可以加超链接 -->
+    <a href="a.html"><img src="0001.png" alt="_self" height="150"></a>
+    <!-- 锚点链接，可跳转至页面内所需要的部分。需要#目标被赋予的id编号，目标需要在标签内加入<id="被赋予的id编号"> -->
+    <a href="#ffff">锚点链接</a>
+    <!-- 表格标签<table></table>,其内需要行标签：<tr></tr>.行标签内需要列标签：<td></td> -->
+    <!-- <table>标签内可以加 align="left"左对齐（默认）"center"居中"right"右对齐来更改表格位置 -->
+    <!-- border边框 cellpadding：边框外部间距 cellspacing：边框内部间距-->
+    <table align="center" border="1" cellpadding="1" cellspacing="0">
+        <!-- tr是行 td是列 -->
+        <tr>
+            <td>01</td>
+            <td>02</td>
+            <td>03</td>
+            <td>03</td>
+        </tr>
+
+        <!-- <thead>表头区域</thead> -->
+        <thead>
+            <!-- 表头单元格<th></th>其中内容会居中并加粗     -->
+            <th>01</th>
+            <th>02</th>
+            <td>04</td>
+            <td>04</td>
+            <td>04</td>
+
+        </thead>
+        <!-- <tbody>主体区域</tbody> -->
+        <tbody>
+            <!-- rowspan:向右合并单元格 colspan：向下合并单元格 -->
+            <td rowspan="2">03</td>
+            <td>04</td>
+            <td colspan="2">04</td>
+            <td>04</td>
+            <td>04</td>
+            <td>04</td>
+        </tbody>
+    </table>
+    <table>
+        <!-- 无序列标ul，内容只能出现li -->
+        <ul>
+            <li>无序列标1</li>
+            <li>无序列标2</li>
+            <li>无序列标3</li>
+        </ul>
+        <!-- 有序列标ol,内容只能出现li -->
+        <ol>
+            <li>01</li>
+            <li>01</li>
+            <li>01</li>
+        </ol>
+        <!-- form表单域用于提交给后端.action 提交的地址 method提交方式 name表单域名 -->
+        <form action="a.html" method="get" name="1">
+            <!-- 自定义列标:dl,其内需要标题dt与内容dd -->
+            <dl>
+                <dt>标题</dt>
+                <dd>内容</dd>
+                <dd>内容</dd>
+                <dd>内容</dd>
+            </dl>
+            <!-- 输入元素input 必备标签type="" 其中text为文本输入 maxlength 输入字符数量的最大值-->
+            账户: <input type="text" maxlength="8">
+            <!-- password为加密文本输入 value输入前默认显示的文字-->
+            密码: <input type="password" value="输入密码"><br>
+            <!-- 单选按钮 后需要添加neme标签命名.选项的name命名一致后才可以实现多选一效果-->
+            单选按钮 01<input type="radio" name="1"> 02<input type="radio" name="1"> 03<input type="radio" name="1"><br>
+            <!-- 多选按钮checkbox checked:进入网页后的默认选项-->
+            多选按钮 1<input type="checkbox" checked="checked">2<input type="checkbox">3<input type="checkbox"> <br>
+            <!-- submit 注册按钮:抗议把表单域内的信息提交到服务器,可以用value来定义按键内文字 -->
+            <input type="submit" value="立刻注册">
+            <!-- reset重新填写 -->
+            <input type="reset" value="重新填写">
+            <!-- button 普通按钮 -->
+            <input type="button" value="发送验证码">
+            <!-- file 上传文件 -->
+            <input type="file" value="上传文件">
+            <!-- label标签:定义热区.需要for参数与表单元素的id一致 !!注意添加name属性-->
+            选择性别
+            <input type="radio" id="nan" name="sex"><label for="nan">男</labelfo>
+            <input type="radio" id="nv"name="sex"><label for="nv">女</labelfo>
+            <!-- selet 下拉菜单,option内容     -->
+            <select>
+                <option>01</option>
+                <option>01</option>
+                <!-- selected 默认选项 -->
+                <option selected="selected">01</option>
+                <option>01</option>
+             <!-- textarea 文字域 cols 每行的字符 rows 显示的行数 -->
+                <textarea cols="50" rows="5">请输入文字</textarea>
+            </select>
+        </form>
+    </table>
+
+</body>
+
+</html>

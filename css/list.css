@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 3648409 */
+    src: url('//at.alicdn.com/t/c/font_3648409_kjvdmwymxtn.woff2?t=1663159804306') format('woff2'), url('//at.alicdn.com/t/c/font_3648409_kjvdmwymxtn.woff?t=1663159804306') format('woff'), url('//at.alicdn.com/t/c/font_3648409_kjvdmwymxtn.ttf?t=1663159804306') format('truetype');
+}
+
+.sk {
+    position: absolute;
+    top: 11px;
+    left: 185px;
+    width: 72px;
+    height: 36px;
+    border-left: 2px solid #b1191a;
+}
+
+.sk img {
+    float: right;
+    width: 56px;
+    height: 26px;
+    margin-top: 4px;
+}
+
+.nav .w .dropdown .dt {
+    width: 393px;
+    background-color: white;
+    border-bottom: 2px solid #b1191a;
+}
+
+.dropdown .dt a {
+    font-size: 16px;
+    color: black;
+    font-weight: 800;
+    padding-left: 60px;
+}
+
+.nav .navitems {
+    float: left;
+    width: 751px;
+    margin-left: 0;
+    padding-left: 48px;
+}
+
+.navitems ul li {
+    margin-right: 32px;
+    font-size: 14px;
+}
+
+.navitems ul li:nth-child(2) a {
+    color: #b1191a;
+}
+
+.nvxie .w {
+    height: 119px;
+    background-color: aqua;
+}
+
+.sk_hd {
+    height: 1000px;
+    margin-top: 25px;
+}
+
+.sk_hd .phone {
+    float: left;
+    margin-right: 8px;
+    width: 292px;
+    height: 463px;
+    border: 1px solid #ffffff;
+}
+
+.sk_hd .phone img {
+    width: 283px;
+    height: 290px;
+}
+
+.sk_hd .phone h6 {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sk_hd .phone .sm {
+    font-size: 14px;
+    color: #b1191a;
+}
+
+.sk_hd .phone i {
+    margin-left: 11px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #b1191a;
+}
+
+.sk_hd .phone em {
+    margin-left: 11px;
+    font-size: 14px;
+    color: #a4a4a4;
+    text-decoration: line-through;
+}
+
+.sk_hd .phone .JinDu {
+    margin-top: 2px;
+}
+
+.JinDu span {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.JinDu span .wz {
+    font-size: 14px;
+    margin-left: 0;
+    font-weight: 400;
+}
+
+.Tiao {
+    margin-left: 0;
+}
+
+.Tiao .hd {
+    width: 133px;
+    height: 13px;
+    margin-top: 2px;
+    border-radius: 7px;
+    border: 2px solid #b1191a;
+    background-color: rgb(255, 255, 255);
+}
+
+.Tiao .hd .bd {
+    margin-left: -1px;
+    width: 114px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: #b1191a;
+}
+
+.buy {
+    float: left;
+    margin-top: 5px;
+    width: 292px;
+    height: 50px;
+    margin-right: -2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    background-color: #b1191a;
+}
+
+.phone:hover {
+    box-sizing: border-box;
+    border: 1px solid #b1191a;
+}
+
+
+/* .phone:nth-child(4n+1) {
+    margin-right: 0px;
+} */
